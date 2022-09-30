@@ -802,7 +802,7 @@ footer {
     }
 }
 
-@media (max-width: 1022px) {
+@media (max-width: 750px) {
     .column-full {
         width: 100% !important;
         text-align: center;
@@ -951,7 +951,7 @@ footer {
 }
 
 .footer-item {
-    margin: 0rem;
+    margin: auto;
 }
 
 .footer-link {
@@ -1171,13 +1171,13 @@ footer {
 }
 
 .container {
-    width: 85%;
+    width: 90%;
 }
 
 @media (min-width: 1091px) {
     .container-full {
         margin: auto;
-        width: 95% !important;
+        width: 100% !important;
     }
 }
 
