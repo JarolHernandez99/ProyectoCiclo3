@@ -455,7 +455,7 @@ footer {
 }
 
 .form-group-container {
-    position: relative;
+    position: fixed;
 }
 
 .form-group-icon {
@@ -499,7 +499,7 @@ footer {
 
 .container-sub-menu {
     overflow: hidden;
-    max-height: 0;
+    max-height: 0.%;
     transition: max-height 0.3s ease;
 }
 
@@ -640,14 +640,14 @@ footer {
 
     .container-sub-menu {
         display: none;
-        max-height: none;
+        max-height: 10px;
         overflow: visible;
     }
 
     .nav-menu-item:hover > .container-sub-menu {
-        width: 400px;
+        width: 10px;
         background: var(--dark-lighten);
-        padding: 1rem;
+        padding: 0rem;
         position: absolute;
         top: 56px;
         display: flex;
@@ -720,7 +720,7 @@ footer {
 .title-cover {
     font-size: 10em;
     margin: 0;
-    color: var(--dark);
+    color: #bb5465;
 }
 
 .banner-cover,
@@ -786,7 +786,7 @@ footer {
     }
 
     .banner .title-cover {
-        font-size: 20rem;
+        font-size: 10rem;
     }
 
     .banner .btn {
@@ -798,11 +798,11 @@ footer {
 
 @media screen and (min-width: 1023px) {
     .banner-cover {
-        background-image: url(../img/banner-large.jpg);
+        background-image: url(../img/banner.jpg);
     }
 }
 
-@media (max-width: 544px) {
+@media (max-width: 1022px) {
     .column-full {
         width: 100% !important;
         text-align: center;
@@ -929,10 +929,10 @@ footer {
 .footer {
     background: var(--dark-lighten);
     margin-top: 1rem;
-    padding: 24px 0px 0px 0px;
+    padding: 150px 0px 0px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1022px) {
     .footer {
         display: flex;
         flex-direction: column;
@@ -944,14 +944,14 @@ footer {
     margin: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1022px) {
     .footer-ul {
         width: auto;
     }
 }
 
 .footer-item {
-    margin: 1rem;
+    margin: 0rem;
 }
 
 .footer-link {
@@ -963,13 +963,13 @@ footer {
 }
 
 .footer-socials {
-    background: var(--primary);
+    background: var(--dark-light);
     width: 100%;
-    display: flex;
+    display:flex;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 0rem;
     color: #ffffff;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 .footer-solcials-link {
@@ -1215,8 +1215,8 @@ footer {
 }
 
 .btn-default {
-    color: var(--dark);
-    border: solid 1px var(--dark);
+    color: var(--dark-lighten);
+    border: solid 1px var(--dark-lighten);
 }
 
 .btn-default:hover {
