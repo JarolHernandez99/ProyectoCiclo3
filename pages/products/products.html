@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+
+<html lang="ES">
+    <head>
+        <title> Productos </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/libs/cssbootstrap/bootstrap.css">
+        <link rel="stylesheet" href="/css/bulma.min.css">
+        <link rel="stylesheet" href="/css/material-design-iconic-font.css">
+        <link rel="stylesheet" href="/css/estilos.css">
+        <link rel="stylesheet" href="products.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div class="header"></div>
+        <div class="container my-5">
+            <div class="row ">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/tshirtBlack.png" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Camiseta negra</h5>
+                            <p class="card-text">Camiseta basica para hombres.<br>
+                                $50.000 </p>
+                            <a href="../productsDetails/tshirtBlack.html"
+                                class="btn btn-primary">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/tshirtSport.png" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Camiseta deportiva</h5>
+                            <p class="card-text"> Camiseta ideal para tus
+                                ejecicios. <br> $75.000</p>
+                            <a href="../productsDetails/tshirtSport.html" class="btn btn-primary">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/img/shirtWhite.png" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Camisa manga larga</h5>
+                            <p class="card-text"> Camisa para hombres. <br>$100.000
+                            </p>
+                            <a href="../productsDetails/shirt.html" class="btn btn-primary">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="footer"></div>
+        </footer>
+    </body>
+
+    <script>
+        $(document).ready(function () {
+          $('.header').load('/shared/header.html');
+          $('.footer').load('/shared/footer.html');
+        });
+    </script>
+</html>

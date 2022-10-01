@@ -454,10 +454,6 @@ footer {
     margin: auto;
 }
 
-.form-group-container {
-    position: fixed;
-}
-
 .form-group-icon {
     position: absolute;
     right: 10px;
@@ -594,14 +590,13 @@ footer {
         transform: translate(0);
         display: flex;
         justify-content: flex-end;
-        background: transparent;
+        background: black;
         width: 100%;
-        height: 100px;
+        height: 60px;
         padding-top: 0;
         border: 0;
         align-items: center;
         overflow: visible;
-        margin-top: 2.5rem;
     }
 
     .nav-menu-ul {
@@ -1211,7 +1206,6 @@ footer {
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    background: transparent;
 }
 
 .btn-default {
