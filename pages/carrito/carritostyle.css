@@ -1,0 +1,18 @@
+
+.btn-outline-success{
+    background-color: rgb(87, 43, 137);
+    color: azure;
+}
+.nav-link{
+    color: rgb(63, 61, 61);  
+}
+.cart-template-holder .cart {
+    border: none;
+    margin-bottom: 20px;
+}
+.table.cart-items {
+    display: inline-table;
+    width:100% ;
+    align-self: center;
+    resize: horizontal;
+}
