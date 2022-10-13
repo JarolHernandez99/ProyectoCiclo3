@@ -3,11 +3,12 @@ html{
 }
 *, *::after, *::before{
     box-sizing: border-box;
-} 
-.login{
-    position: relative;
-    /* border: 1px solid red; */
+}
+
+.father{
+    position:relative ;
     width: 40%;
+    /* border: red solid; */
     top: 80px;
     left: 30%;
     margin: 0px 0px 140px 0px;
@@ -40,8 +41,7 @@ input{
     /* border-radius: 10px; */
 
 }
-
-.login a{
+.father a{
     text-align: center;
     text-decoration: none;
     display: block;
@@ -49,21 +49,25 @@ input{
     background-color: blue;
     color: aliceblue;
     /* height: 35px;  */
-    width: 100px;
+    width: 140px;
     padding:10px;
     border-radius: 10px ;
     left: 100px;
 }
-.login a:hover{
+/* .father a:link{
+    color: aliceblue;
+} */
+.father a:hover{
     text-decoration: none;
+    /* font-size: 20px;*/
     background-color: rgba(0, 0, 255, 0.789);
+
+    /* background-color: rgba(0, 0, 0, 0.825); */
     color: aliceblue;
 }
-.login a:active{
+.father a:active{
+    /* background-color: gray; */
     background-color:rgba(0, 72, 255, 0.974);
+
 }
-.login form .registrar{
-    position: relative;
-    left: 365px;
-    bottom:67px;
-}
+

@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+
+<html lang="ES">
+    <head>
+        <title> Registro </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./registration.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div class="header"></div>
+        <div class="father">
+                <div> 
+                    <h2> Crear cuenta</h2>
+                </div>
+                <form  name="frm_registration" method="post" enctype="multipart/form-data" autocomplete="off"> 
+                    <label  name="lblnombre"> Nombre: </label>
+                    <input  type="text" name="txtnombre" placeholder=" Nombre" >
+                    <label name="lblapellido"> Apellidos: </label>
+                    <input type="text" name="txtapellido" placeholder="Apellidos">
+                    <label  name="lblcorreo"> E-mail: </label>
+                    <input  type="text" name="txtcorreo" placeholder="E-mail">
+                    <label  name="lblcontrasena"> Contraseña: </label>
+                    <input  type="password" name="txtcontrasena" placeholder="******">
+                    <a href="#"> Registrar</a>
+                    <!-- <input id="btnregistro" type="button" name="btnregistro" value="Completar registro"> -->
+                </form>
+        </div>
+        <footer>
+            <div class="footer"></div>
+        </footer>
+    </body>
+    <script>
+        $(document).ready(function () {
+          $('.header').load('/shared/header.html');
+          $('.footer').load('/shared/footer.html');
+        });
+    </script>
+</html>

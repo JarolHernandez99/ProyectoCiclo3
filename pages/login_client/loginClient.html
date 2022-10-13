@@ -5,32 +5,25 @@
         <title> Acceso </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/libs/cssbootstrap/bootstrap.css">
-        <link rel="stylesheet" href="/css/bulma.min.css">
-        <link rel="stylesheet" href="/css/material-design-iconic-font.css">
-        <!-- <link rel="stylesheet" href="/css/estilos.css"> -->
-        <!-- <link rel="stylesheet" href="products.css"> -->
-        <link rel="stylesheet" href="../login_client/client.css">
+        <link rel="stylesheet" href="/pages/login_client/client.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     </head>
     <body>
         <header >
             <div class="header"> </div>
         </header> 
-
         <div class="login ">
             <h2 > Iniciar sesion </h2>
             <form name="frm_client" method="post" enctype="multipart/form-data" autocomplete="off">
-                <label id="lblemail"> E-mail </label>
+                <label id="lblemail"> E-mail: </label>
                 <input id="txtcorreo" type="text" name="correo" placeholder=" Ejemplo: tucorreo01@gmail.com"> 
-                <label id="lblcontrasena"> Contraseña </label>
+                <label id="lblcontrasena"> Contraseña: </label>
                 <input id="txtcontrasena" type="password" name="contrasena" placeholder="********">
-                <a href="#">
-                <input id="btniniciar" type="button" name="acceso" value="Acceder">
-                </a>
-                <a    href="#"> Registrarse </a>
+                <a class="ingresar" href="#"> Ingresar</a> <br>
+                <a class="registrar" href="/pages/registration/registration.html"> Registrarse </a>
             </form>
         </div>
+
         <footer>
             <div class="footer"> </div>
         </footer>
