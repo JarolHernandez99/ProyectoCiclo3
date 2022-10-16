@@ -12,25 +12,57 @@
         <link rel="stylesheet" href="/css/estilos.css">
         <link rel="stylesheet" href="products.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            function consultar(){
+                console.log("solictiando.")
+                fetch("http://localhost:8080/productos")
+                .then( response => response.json())
+                .then(data =>{ console.log(data)
+                    let card = ""
+                    data.forEach(element => {
+                    card += '<div class="col my-5">'
+                    card += '<div class="card" style="width: 18rem;">'
+                    card += '    <img src="/images/'+ element.id+'.jpg " class="card-img-top"'
+                    card += '        alt="...">'
+                    card += '    <div class="card-body">'
+                    card += '        <h5 class="card-title">'+ element.nombre+'</h5>'
+                    card += '        <p class="card-text">'+ element.precio+' </p>'
+                    card += '        <a href="/pages/productsDetails/detalleProducto.html?id='+element.id+'"'
+                    card += '            class="btn btn-primary">Detalles</a>'
+                    card += '    </div>'
+                    card += '</div>'
+                    card += '</div>'
+                });
+                document.getElementById('lproductos').innerHTML = card
+                })
+
+            }
+
+
+
+            consultar()
+
+        </script>
     </head>
     <body>
         <div class="header"></div>
         <div class="container my-5">
-            <div class="row ">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/tshirtBlack.png" class="card-img-top"
+            <div class="row" id="lproductos">
+                <!-- <div id="lproductos"> -->
+                   
+                    <!-- <div class="card" style="width: 18rem;">
+                        <img src="/img/detalleProducto.png" class="card-img-top"
                             alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Camiseta negra</h5>
                             <p class="card-text">Camiseta basica para hombres.<br>
                                 $50.000 </p>
-                            <a href="/pages/productsDetails/tshirtBlack.html"
+                            <a href="/pages/productsDetails/detalleProducto.html"
                                 class="btn btn-primary">Detalles</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
+                    </div> -->
+                <!-- </div> -->
+                <!-- <div class="col">
                     <div class="card" style="width: 18rem;">
                         <img src="/img/tshirtSport.png" class="card-img-top"
                             alt="...">
@@ -53,7 +85,7 @@
                             <a href="/pages/productsDetails/shirt.html" class="btn btn-primary">Detalles</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>
