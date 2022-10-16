@@ -11,17 +11,18 @@
         <link rel="stylesheet" href="/css/estilos.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" href="styleTblack.css">
-    </head>
-    <body>
-        <div class="header"></div>
-        <div class="container my-5">
-            <div class="row mx-10" >
-                <div class="col my ">
-                    <img class="camiseta" src="/img/tshirtBlack.png"  alt="">
+        <script>
+            function consultar(){
+                const urlParams = new URLSearchParams(window.location.search);
+                fetch("http://localhost:8080/productos/"+urlParams.get('id'))
+                .then( response => response.json())
+                .then((data =>{ console.log(data)
+                    let detalle = `<div class="col my ">
+                    <img class="camiseta" src="/images/${data.id}.jpg"  alt="">
                 </div>
                 <div class="col my">
-                        <h2 >Camiseta negra</h2>
-                        <p > $50.000 </p> 
+                    <h2 >${data.nombre}</h2>
+                        <p > ${data.precio} </p> 
                         <p>  Camisata para hombre, cuello redondo totalmente lisa <br> de color negro y manga corta. </p>
                         <ul>
                             <li> 100% Algodón</li>
@@ -40,7 +41,21 @@
                         </ol>
                         <a href="#"class="btn btn-primary"> Comprar</a>
                         </a>    
-                </div>
+                </div>`
+                
+                document.getElementById('product-detail').innerHTML = detalle
+                }));
+            }
+            consultar();
+        </script>
+
+                
+    </head>
+    <body>
+        <div class="header"></div>
+        <div class="container my-5">
+            <div class="row mx-10" id="product-detail">
+               
             </div>
 
         </div>
