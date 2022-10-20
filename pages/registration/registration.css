@@ -35,7 +35,7 @@ input{
     width: 70%;
     padding: 10px;
     position: relative;
-    left: 100px;
+    left: 120px;
     top: -35px;
     /* border: 2px solid red; */
     /* border-radius: 10px; */
@@ -52,7 +52,7 @@ input{
     width: 140px;
     padding:10px;
     border-radius: 10px ;
-    left: 100px;
+    left: 10px;
 }
 /* .father a:link{
     color: aliceblue;
