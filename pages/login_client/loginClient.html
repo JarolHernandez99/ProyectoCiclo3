@@ -14,20 +14,41 @@
         </header> 
         <div class="login ">
             <h2 > Iniciar sesion </h2>
-            <form name="frm_client" method="post" enctype="multipart/form-data" autocomplete="off">
+            <form name="frm_client" method="post" enctype="multipart/form-data"  autocomplete="off">
                 <label id="lblemail"> E-mail: </label>
                 <input id="txtcorreo" type="text" name="correo" placeholder=" Ejemplo: tucorreo01@gmail.com"> 
                 <label id="lblcontrasena"> Contraseña: </label>
                 <input id="txtcontrasena" type="password" name="contrasena" placeholder="********">
-                <a class="ingresar" href="#"> Ingresar</a> <br>
+                <a class="ingresar" href="#" onclick='accesar()'> Ingresar</a> <br>
                 <a class="registrar" href="/pages/registration/registration.html"> Registrarse </a>
             </form>
         </div>
-
         <footer>
             <div class="footer"> </div>
         </footer>
     </body>
+    <script>
+        function accesar(){
+            console.log("accesando...")
+            let correo = document.frm_client.correo.value
+            let contrasena = document.frm_client.contrasena.value
+            console.log(correo + ","+ contrasena)
+            fetch("http://localhost:8080/usuarios/login?correo="+ correo +"&contrasena="+contrasena+"") 
+            .then(response => response.json())
+            .then(data =>{ console.log(data)
+                if(data.msj == "ok"){
+                    if(data.tipo == 1){
+                        document.location = '/pages/products/products.html'
+                    }else{
+                        document.location = "#" //panel de control// 
+                    }
+                }else{
+                    alert(data.msj)
+                }
+            })
+        }
+    </script>
+
     <script>
         $(document).ready(function () {
           $('.header').load('/shared/header.html');
