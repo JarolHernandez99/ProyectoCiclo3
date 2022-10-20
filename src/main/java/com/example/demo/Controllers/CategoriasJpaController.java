@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author aldan
  */
 @RestController()
-@RequestMapping("/categorias")
+@RequestMapping("/categorias") 
 public class CategoriasJpaController implements Serializable {
 
     public CategoriasJpaController(EntityManagerFactory emf) {
