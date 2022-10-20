@@ -121,7 +121,7 @@ public class UsuariosJpaController implements Serializable {
                 Object [] le = (Object []) u.get(0);
                 System.out.println("Nombre: "+ le[1]);
                 System.out.println("Tipo: "+ le[4]);
-                rta.put ("msj","Ok");
+                rta.put ("msj","Ok ");
                 rta.put ( "tipo",""+ le[4]);
             }
             
